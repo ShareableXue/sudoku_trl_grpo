@@ -1,0 +1,13 @@
+trl
+swanlab
+addict
+accelerate
+transformers
+peft
+diffusers
+deepspeed
+datasets
+modelscope[datasets]
+fastapi
+uvicorn
+vllm

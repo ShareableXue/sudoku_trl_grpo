@@ -1,0 +1,18 @@
+# python temp file
+__pycache__/
+
+# npu file
+kernel_meta/
+fusion_result.json
+
+# model & data
+models/
+data/
+
+# output file
+outputs/
+run.log
+run.pid
+
+# test file
+*.ipynb
