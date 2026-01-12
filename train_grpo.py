@@ -251,7 +251,10 @@ def grpo_function(
     )
     sudoku_dataset = sudoku_dataset.filter(lambda x: x["label"] == "simple")
     sudoku_dataset = sudoku_dataset.shuffle(seed=42)  # 固定seed打乱
-    train_dataset,eval_dataset = sudoku_dataset["train"].train_test_split(test_size=0.1, seed=42)
+ 
+    split = sudoku_dataset["train"].train_test_split(test_size=0.1, seed=42)
+    train_dataset = split["train"]
+    eval_dataset = split["test"]
 
     def make_conversation(example):
         sudo_str = SUDOKU_FORMAT.format(*[c for c in example["question"]])
